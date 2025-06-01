@@ -1,66 +1,5 @@
-// import React from 'react';
-// import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-// import Home from './components/Home';
-// import About from './components/About';
-// import Experiences from './components/Experiences';
-// import Projects from './components/Projects';
-// import Skills from './components/Skills';
-// import Contact from './components/Contact';
-// import Resume from './components/Resume';
-
-// const App = () => {
-//   const navItems = ['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact', 'Resume'];
-
-//   return (
-//     <div style={{ backgroundColor: '#0a192f', color: '#ccd6f6', fontFamily: 'Poppins, sans-serif', minHeight: '100vh' }}>
-//       <AppBar position="fixed" style={{ backgroundColor: '#0a192f', boxShadow: '0 2px 5px rgba(0,0,0,0.3)' }}>
-//         <Toolbar style={{ justifyContent: 'space-between' }}>
-//           <Typography variant="h6" style={{ fontWeight: 600, color: '#64ffda' }}>
-//             Shreya Mhetre
-//           </Typography>
-//           <div style={{ display: 'flex', alignItems: 'center' }}>
-//             <div style={{ display: { xs: 'none', sm: 'block' } }}>
-//               {navItems.map((item) => (
-//                 <Button
-//                   key={item}
-//                   href={`#${item.toLowerCase()}`}
-//                   sx={{
-//                     color: '#ccd6f6',
-//                     marginLeft: '20px',
-//                     textTransform: 'none',
-//                     fontSize: 14,
-//                     position: 'relative',
-//                     borderBottom: '2px solid transparent', // Initial transparent border
-//                     transition: 'border-bottom 0.3s ease-in-out', // Smooth transition for border
-//                     '&:hover': {
-//                       cursor: 'pointer',
-//                       borderBottom: '1px solid #ccd6f6', // White underline on hover
-//                     },
-//                   }}
-//                 >
-//                   {item}
-//                 </Button>
-//               ))}
-//             </div>
-//           </div>
-//         </Toolbar>
-//       </AppBar>
-//       <div style={{ marginTop: 64 }}>
-//         <Home />
-//         <About />
-//         <Experiences />
-//         <Projects />
-//         <Skills />
-//         <Contact />
-//         <Resume />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-
 "use client"
+
 import Home from "./components/Home"
 import About from "./components/About"
 import Experiences from "./components/Experiences"
@@ -76,11 +15,13 @@ const App = () => {
     <div
       style={{
         backgroundColor: "#ffffff",
-        color: "#333333",
-        fontFamily: "Poppins, sans-serif",
+        color: "#2c3e50",
+        fontFamily: "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         minHeight: "100vh",
+        lineHeight: 1.6,
       }}
     >
+      {/* Mobile-first Navigation */}
       <header
         style={{
           position: "fixed",
@@ -88,8 +29,9 @@ const App = () => {
           left: 0,
           right: 0,
           backgroundColor: "rgba(255, 255, 255, 0.95)",
-          boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-          padding: "15px 40px",
+          backdropFilter: "blur(10px)",
+          boxShadow: "0 2px 20px rgba(0,0,0,0.1)",
+          padding: "12px 20px",
           zIndex: 1000,
         }}
       >
@@ -98,25 +40,30 @@ const App = () => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            maxWidth: "1400px",
+            maxWidth: "1200px",
             margin: "0 auto",
           }}
         >
           <h1
             style={{
-              fontWeight: 600,
-              color: "#800080",
+              fontWeight: 700,
+              color: "#3b82f6",
               margin: 0,
-              fontSize: "1.5rem",
+              fontSize: "clamp(1.2rem, 3vw, 1.4rem)",
+              background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
           >
             Shreya Mhetre
           </h1>
-          <nav>
+
+          {/* Mobile Navigation - Hidden on small screens, shown as hamburger */}
+          <nav style={{ display: window.innerWidth > 768 ? "block" : "none" }}>
             <ul
               style={{
                 display: "flex",
-                gap: "30px",
+                gap: "clamp(15px, 2vw, 25px)",
                 listStyle: "none",
                 margin: 0,
                 padding: 0,
@@ -127,18 +74,19 @@ const App = () => {
                   <a
                     href={`#${item.toLowerCase()}`}
                     style={{
-                      color: "#555555",
+                      color: "#64748b",
                       textDecoration: "none",
-                      fontSize: "14px",
+                      fontSize: "clamp(12px, 1.5vw, 14px)",
+                      fontWeight: 500,
                       position: "relative",
-                      padding: "5px 0",
-                      transition: "color 0.3s ease",
+                      padding: "8px 0",
+                      transition: "all 0.3s ease",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.color = "#800080"
+                      e.target.style.color = "#3b82f6"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.color = "#555555"
+                      e.target.style.color = "#64748b"
                     }}
                   >
                     {item}
@@ -147,9 +95,24 @@ const App = () => {
               ))}
             </ul>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            style={{
+              display: window.innerWidth <= 768 ? "block" : "none",
+              background: "none",
+              border: "none",
+              fontSize: "24px",
+              color: "#3b82f6",
+              cursor: "pointer",
+            }}
+          >
+            ☰
+          </button>
         </div>
       </header>
-      <div style={{ marginTop: 64 }}>
+
+      <main style={{ marginTop: "70px" }}>
         <Home />
         <About />
         <Experiences />
@@ -157,17 +120,18 @@ const App = () => {
         <Skills />
         <Contact />
         <Resume />
-      </div>
+      </main>
+
       <footer
         style={{
-          padding: "20px",
+          padding: "30px 20px",
           textAlign: "center",
-          color: "#777777",
-          backgroundColor: "#f9f9f9",
-          borderTop: "1px solid #eeeeee",
+          color: "#64748b",
+          backgroundColor: "#f8fafc",
+          borderTop: "1px solid #e2e8f0",
         }}
       >
-        <p>© 2025 Shreya Mhetre. All rights reserved.</p>
+        <p style={{ margin: 0, fontSize: "clamp(12px, 2vw, 14px)" }}>© 2025 Shreya Mhetre.</p>
       </footer>
     </div>
   )

@@ -1,204 +1,3 @@
-// import React from 'react';
-// import { Typography, Box } from '@mui/material';
-// import GitHubIcon from '@mui/icons-material/GitHub';
-
-// const Projects = () => {
-//   const projects = [
-//     {
-//       title: 'Ai-Research-Assistant',
-//       description: 'A personal portfolio website built with React and Material UI to showcase my projects and skills.',
-//       githubLink: 'https://github.com/shreyamhetre/Ai-research-Assistant',
-//     },
-//     {
-//       title: 'E-commerce ',
-//       description: 'A full-stack e-commerce application with user authentication, product listings, and payment integration.',
-//       githubLink: 'https://github.com/varadbhogayata/ecommerce-platform',
-//     },
-//     {
-//       title: 'Task Manager',
-//       description: 'A task management app with features like task creation, categorization, and deadline tracking.',
-//       githubLink: 'https://github.com/varadbhogayata/task-manager',
-//     },
-//     {
-//       title: 'Weather App',
-//       description: 'A weather forecasting app that provides real-time weather updates using a public API.',
-//       githubLink: 'https://github.com/varadbhogayata/weather-app',
-//     },
-//   ];
-
-//   return (
-//     <section
-//       id="projects"
-//       style={{
-//         padding: '100px 20px',
-//         maxWidth: 1200,
-//         margin: '0 auto',
-//         backgroundColor: '#0a192f',
-//         color: '#ccd6f6',
-//         fontFamily: 'Poppins, sans-serif',
-//       }}
-//     >
-//       <Typography
-//         variant="h4"
-//         style={{
-//           color: '#64ffda',
-//           fontWeight: 400,
-//           marginBottom: 40,
-//           textAlign: 'center',
-//         }}
-//       >
-//         Some Things I've Built
-//       </Typography>
-//       <Box
-//         style={{
-//           display: 'flex',
-//           flexDirection: 'row',
-//           gap: 20,
-//           flexWrap: 'wrap',
-//           justifyContent: 'center',
-          
-//         }}
-//       >
-//         {projects.map((project, index) => (
-//           <Box
-//             key={index}
-//             className="card"
-//             sx={{
-//               width: 250,
-//               height: 120,
-//               transition: 'all 0.5s',
-//               boxShadow: '15px 15px 30px rgba(0, 0, 0, 0.2), -15px -15px 30px rgba(60, 60, 60, 0.1)',
-//               textAlign: 'center',
-//               overflow: 'hidden',
-//               borderRadius: '5px',
-//               backgroundColor: '#112240',
-//               cursor: 'pointer',
-//               border: '0.5px solid white',
-//               '&:hover': {
-//                 height: 260,
-//                 background: 'linear-gradient(360deg, #112240 60%, #0a192f 70%)',
-//               },
-//               '&:hover .header': {
-//                 clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 96%)',
-//               },
-//             }}
-//           >
-//             <Box
-//               className="header"
-//               sx={{
-//                 padding: '20px',
-//                 display: 'flex',
-//                 flexDirection: 'column',
-//                 alignItems: 'center',
-//                 justifyContent: 'center',
-//                 background: '#0a192f',
-//                 marginBottom: '16px',
-//                 transition: 'all 0.5s',
-
-//                 border: '1px solid white'
-//               }}
-//             >
-//               <Box
-//                 className="img-box"
-//                 sx={{
-//                   width: '50px',
-//                   height: '50px',
-//                   display: 'flex',
-//                   justifyContent: 'center',
-//                   alignItems: 'center',
-
-//                 }}
-//               >
-//                 {/* Icon placeholder - You can replace with project-specific icons */}
-//                 <svg width="40" height="40" viewBox="0 0 24 24">
-//                   <path
-//                     fill="none"
-//                     d="M0 0h24v24H0z"
-//                   />
-//                   <path
-//                     d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z"
-//                     fill="#64ffda"
-//                   />
-//                 </svg>
-//               </Box>
-//               <Typography
-//                 className="title"
-//                 sx={{
-//                   fontSize: '10px',
-//                   letterSpacing: '0.1em',
-//                   fontWeight: 700,
-//                   textTransform: 'uppercase',
-//                   padding: '4px 0 14px 0',
-//                   transition: 'all 0.5s',
-//                   color: '#64ffda',
-
-//                 }}
-//               >
-//                 {project.title}
-//               </Typography>
-//             </Box>
-//             <Box
-//               className="content"
-//               sx={{
-//                 display: 'block',
-//                 textAlign: 'left',
-//                 color: '#ccd6f6',
-//                 margin: '0 18px',
-//                 position: 'relative',
-//                 height: '120px',
-//               }}
-//             >
-//               <Typography
-//                 sx={{
-//                   transition: 'all 0.5s',
-//                   fontSize: '0.8em',
-//                   marginBottom: '8px',
-//                   lineHeight: 1.6,
-//                 }}
-//               >
-//                 {project.description}
-//               </Typography>
-//               <Box
-//                 sx={{
-//                   position: 'absolute',
-//                   bottom: '20px',
-//                   right: '5px',
-
-//                 }}
-//               >
-//                 <a
-//                   href={project.githubLink}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   style={{
-//                     color: '#64ffda',
-//                     cursor: 'pointer',
-//                     transition: 'all 0.3s',
-//                     display: 'flex',
-//                     alignItems: 'center',
-//                     gap: '4px',
-//                   }}
-//                   className="btn-link"
-//                   sx={{
-//                     '&:hover': {
-//                       transform: 'scale(1.1)',
-//                     },
-//                   }}
-//                 >
-//                   <GitHubIcon style={{ fontSize: 24 }} />
-//                 </a>
-//               </Box>
-//             </Box>
-//           </Box>
-//         ))}
-//       </Box>
-//     </section>
-//   );
-// };
-
-// export default Projects;
-
-
 "use client"
 
 const Projects = () => {
@@ -206,24 +5,30 @@ const Projects = () => {
     {
       title: "AI Research Assistant",
       description:
-        "A tool that helps researchers find, organize, and analyze academic papers using natural language processing and machine learning.",
+        "A comprehensive tool that helps researchers find, organize, and analyze academic papers using natural language processing and machine learning algorithms.",
       githubLink: "https://github.com/shreyamhetre/Ai-research-Assistant",
+      technologies: ["React", "Node.js", "Python", "NLP"],
     },
     {
       title: "E-commerce Platform",
       description:
-        "A full-stack e-commerce application with user authentication, product listings, and payment integration.",
+        "A full-stack e-commerce application with user authentication, product listings, shopping cart, and secure payment integration.",
       githubLink: "https://github.com/varadbhogayata/ecommerce-platform",
+      technologies: ["React", "Express", "MongoDB", "Stripe"],
     },
     {
-      title: "Task Manager",
-      description: "A task management app with features like task creation, categorization, and deadline tracking.",
+      title: "Task Manager Pro",
+      description:
+        "A productivity app with advanced features like task creation, categorization, deadline tracking, and team collaboration.",
       githubLink: "https://github.com/varadbhogayata/task-manager",
+      technologies: ["React", "Firebase", "Material-UI"],
     },
     {
-      title: "Weather App",
-      description: "A weather forecasting app that provides real-time weather updates using a public API.",
+      title: "Weather Forecast App",
+      description:
+        "A responsive weather application that provides real-time weather updates, forecasts, and location-based services.",
       githubLink: "https://github.com/varadbhogayata/weather-app",
+      technologies: ["JavaScript", "API", "CSS3"],
     },
   ]
 
@@ -231,20 +36,18 @@ const Projects = () => {
     <section
       id="projects"
       style={{
-        padding: "100px 20px",
-        maxWidth: 1200,
+        padding: "clamp(40px, 8vw, 80px) 20px",
+        maxWidth: "1200px",
         margin: "0 auto",
         backgroundColor: "#ffffff",
-        color: "#333333",
-        fontFamily: "Poppins, sans-serif",
       }}
     >
       <h2
         style={{
-          color: "#333333",
-          fontWeight: 600,
-          marginBottom: 40,
-          fontSize: "2.5rem",
+          color: "#1e293b",
+          fontWeight: 700,
+          marginBottom: "clamp(30px, 5vw, 50px)",
+          fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
           textAlign: "center",
           position: "relative",
         }}
@@ -254,12 +57,12 @@ const Projects = () => {
           style={{
             content: '""',
             position: "absolute",
-            bottom: "-10px",
+            bottom: "-15px",
             left: "50%",
             transform: "translateX(-50%)",
-            width: "80px",
+            width: "60px",
             height: "4px",
-            backgroundColor: "#800080",
+            background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
             borderRadius: "2px",
           }}
         ></div>
@@ -268,9 +71,9 @@ const Projects = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          gap: "30px",
-          marginTop: "60px",
+          gridTemplateColumns: window.innerWidth > 768 ? "repeat(4, 1fr)" : "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "clamp(15px, 2vw, 30px)",
+          marginTop: "clamp(40px, 6vw, 60px)",
         }}
       >
         {projects.map((project, index) => (
@@ -278,60 +81,52 @@ const Projects = () => {
             key={index}
             style={{
               backgroundColor: "white",
-              borderRadius: "12px",
+              borderRadius: "20px",
               overflow: "hidden",
-              boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
               transition: "all 0.3s ease",
-              border: "1px solid #f0f0f0",
+              border: "1px solid #e2e8f0",
               height: "100%",
               display: "flex",
               flexDirection: "column",
             }}
             onMouseEnter={(e) => {
               e.target.style.transform = "translateY(-10px)"
-              e.target.style.boxShadow = "0 15px 30px rgba(0,0,0,0.1)"
+              e.target.style.boxShadow = "0 20px 40px rgba(0,0,0,0.12)"
             }}
             onMouseLeave={(e) => {
               e.target.style.transform = "translateY(0)"
-              e.target.style.boxShadow = "0 10px 20px rgba(0,0,0,0.05)"
+              e.target.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)"
             }}
           >
             <div
               style={{
-                height: "160px",
-                backgroundColor: "#800080",
+                height: "180px",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                 position: "relative",
                 overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  fontSize: "60px",
-                  color: "rgba(255,255,255,0.2)",
-                }}
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.3)"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <svg
-                  width="80"
-                  height="80"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z" />
-                </svg>
-              </div>
+                <path d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z" />
+              </svg>
             </div>
 
             <div
               style={{
-                padding: "25px",
+                padding: "clamp(20px, 3vw, 30px)",
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
@@ -339,10 +134,11 @@ const Projects = () => {
             >
               <h3
                 style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
+                  fontSize: "clamp(16px, 2vw, 20px)",
+                  fontWeight: "700",
                   marginBottom: "15px",
-                  color: "#333333",
+                  color: "#1e293b",
+                  lineHeight: 1.3,
                 }}
               >
                 {project.title}
@@ -350,15 +146,40 @@ const Projects = () => {
 
               <p
                 style={{
-                  color: "#666666",
+                  color: "#64748b",
                   lineHeight: "1.6",
-                  fontSize: "15px",
+                  fontSize: "clamp(13px, 1.5vw, 15px)",
                   flex: 1,
                   marginBottom: "20px",
                 }}
               >
                 {project.description}
               </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "8px",
+                  marginBottom: "25px",
+                }}
+              >
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    style={{
+                      backgroundColor: "#f1f5f9",
+                      color: "#475569",
+                      padding: "4px 12px",
+                      borderRadius: "20px",
+                      fontSize: "clamp(10px, 1.2vw, 12px)",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
               <div
                 style={{
@@ -373,25 +194,25 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    color: "#800080",
+                    color: "#3b82f6",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
                     textDecoration: "none",
-                    fontWeight: "500",
-                    fontSize: "14px",
+                    fontWeight: "600",
+                    fontSize: "clamp(12px, 1.5vw, 14px)",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.color = "#ff5252"
+                    e.target.style.color = "#1d4ed8"
                     e.target.style.gap = "12px"
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.color = "#800080"
+                    e.target.style.color = "#3b82f6"
                     e.target.style.gap = "8px"
                   }}
                 >
-                  View on GitHub
+                  View Code
                   <svg
                     width="16"
                     height="16"
@@ -411,20 +232,23 @@ const Projects = () => {
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(255,107,107,0.1)",
+                    background: "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#800080",
+                    color: "#3b82f6",
                     cursor: "pointer",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "rgba(255,107,107,0.2)"
+                    e.target.style.background = "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)"
+                    e.target.style.color = "white"
                     e.target.style.transform = "scale(1.1)"
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "rgba(255,107,107,0.1)"
+                    e.target.style.background =
+                      "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)"
+                    e.target.style.color = "#3b82f6"
                     e.target.style.transform = "scale(1)"
                   }}
                 >

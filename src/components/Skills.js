@@ -1,213 +1,3 @@
-// import React, { useState } from 'react';
-// import { Typography, Box, Button } from '@mui/material';
-
-// const Skills = () => {
-//   const [activeTab, setActiveTab] = useState('skills');
-
-//   const skillsData = {
-//     skills: [
-//       { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-//       { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-//       { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-//       { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-//       { name: 'ReactJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-//       { name: 'NodeJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-//       { name: 'Material UI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg' },
-//       { name: 'Postgres', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-//     ],
-//     tools: [
-//       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-//       { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-//       { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-//       { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-//       { name: 'VSCode', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-//     ],
-//   };
-
-//   const activeItems = skillsData[activeTab];
-
-//   return (
-//     <section
-//       id="skills"
-//       style={{
-//         padding: '100px 20px',
-//         maxWidth: 1200,
-//         margin: '0 auto',
-//         backgroundColor: '#0a192f',
-//         color: '#ccd6f6',
-//         fontFamily: 'Poppins, sans-serif',
-//       }}
-//     >
-//       <Box
-//         sx={{
-//           display: 'flex',
-//           flexDirection: { xs: 'column', md: 'row' },
-//           gap: { xs: '40px', md: '80px' },
-//           alignItems: { xs: 'center', md: 'flex-start' },
-//         }}
-//       >
-//         {/* Left Side - Title and Description */}
-//         <Box
-//           sx={{
-//             flex: '1',
-//             maxWidth: { xs: '100%', md: '500px' },
-
-//           }}
-//         >
-//           <Box
-//             sx={{
-//               display: 'flex',
-//               flexDirection: 'column',
-//               position: 'relative',
-
-//             }}
-//           >
-//             <Box sx={{ ml: { xs: 0, md: 4 }, position: 'relative',  }}>
-//               <Box
-//                 sx={{
-//                   width: '3px',
-//                   height: '80px',
-//                   backgroundColor: '#64ffda',
-//                   position: 'absolute',
-//                   left: '-20px',
-//                   top: '10px',
-//                   display: { xs: 'none', md: 'block' },
-//                 }}
-//               />
-//               <Typography
-//                 variant="h3"
-//                 sx={{
-//                   color: '#ccd6f6',
-//                   fontWeight: 700,
-//                   mb: 3,
-//                   fontSize: { xs: '2rem', md: '2.5rem' },
-//                   lineHeight: 1.2,
-//                 }}
-//               >
-//                 What My Programming Skills Included?
-//               </Typography>
-//               <Typography
-//                 variant="body1"
-//                 sx={{
-//                   color: '#8892b0',
-//                   lineHeight: 1.7,
-//                   mb: 4,
-//                   fontSize: '1rem',
-//                 }}
-//               >
-//                 I develop simple, intuitive and responsive user interface that helps
-//                 users get things done with less effort and time with those
-//                 technologies.
-//               </Typography>
-//               <Box
-//                 sx={{
-//                   display: 'flex',
-//                   gap: '10px',
-//                 }}
-//               >
-//                 <Button
-//                   onClick={() => setActiveTab('skills')}
-//                   sx={{
-//                     backgroundColor: activeTab === 'skills' ? '#64ffda20' : 'transparent',
-//                     color: activeTab === 'skills' ? '#64ffda' : '#8892b0',
-//                     border: activeTab === 'skills' ? '1px solid #64ffda' : '1px solid #8892b0',
-//                     borderRadius: '4px',
-//                     padding: '10px 30px',
-//                     textTransform: 'none',
-//                     fontWeight: 600,
-//                     '&:hover': {
-//                       backgroundColor: '#64ffda10',
-//                     },
-//                   }}
-//                 >
-//                   Skills
-//                 </Button>
-//                 <Button
-//                   onClick={() => setActiveTab('tools')}
-//                   sx={{
-//                     backgroundColor: activeTab === 'tools' ? '#64ffda20' : 'transparent',
-//                     color: activeTab === 'tools' ? '#64ffda' : '#8892b0',
-//                     border: activeTab === 'tools' ? '1px solid #64ffda' : '1px solid #8892b0',
-//                     borderRadius: '4px',
-//                     padding: '10px 30px',
-//                     textTransform: 'none',
-//                     fontWeight: 600,
-//                     '&:hover': {
-//                       backgroundColor: '#64ffda10',
-//                     },
-//                   }}
-//                 >
-//                   Tools
-//                 </Button>
-//               </Box>
-//             </Box>
-//           </Box>
-//         </Box>
-
-//         {/* Right Side - Skill Icons */}
-//         <Box
-//           sx={{
-//             flex: '1',
-//             display: 'grid',
-//             gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-//             gap: '20px',
-//             width: '100%',
-
-//           }}
-//         >
-//           {activeItems.map((item, index) => (
-//             <Box
-//               key={index}
-//               sx={{
-//                 backgroundColor: '#112240',
-//                 borderRadius: '10px',
-//                 padding: '20px',
-//                 display: 'flex',
-//                 flexDirection: 'column',
-//                 alignItems: 'center',
-//                 justifyContent: 'center',
-//                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-//                 transition: 'all 0.3s ease',
-//                 cursor: 'pointer',
-//                 '&:hover': {
-//                   transform: 'translateY(-10px)',
-//                   boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
-//                   backgroundColor: '#1a2c4e',
-//                 },
-//               }}
-//             >
-//               <Box
-//                 component="img"
-//                 src={item.icon}
-//                 alt={item.name}
-//                 sx={{
-//                   width: '40px',
-//                   height: '40px',
-//                   marginBottom: '10px',
-//                   padding: '10px',
-//                 }}
-//               />
-//               <Typography
-//                 variant="body2"
-//                 sx={{
-//                   color: '#ccd6f6',
-//                   fontSize: '0.8rem',
-//                   fontWeight: 500,
-//                   textAlign: 'center',
-//                 }}
-//               >
-//                 {item.name}
-//               </Typography>
-//             </Box>
-//           ))}
-//         </Box>
-//       </Box>
-//     </section>
-//   );
-// };
-
-// export default Skills;
-
 "use client"
 
 import { useState } from "react"
@@ -217,21 +7,21 @@ const Skills = () => {
 
   const skillsData = {
     skills: [
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
       {
         name: "JavaScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       },
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "ReactJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       {
-        name: "Material UI",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       },
       {
-        name: "Postgres",
+        name: "PostgreSQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       },
     ],
@@ -240,7 +30,8 @@ const Skills = () => {
       { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "VSCode", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+      { name: "Webpack", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" },
     ],
   }
 
@@ -250,20 +41,18 @@ const Skills = () => {
     <section
       id="skills"
       style={{
-        padding: "100px 20px",
-        maxWidth: 1200,
+        padding: "clamp(40px, 8vw, 80px) 20px",
+        maxWidth: "1200px",
         margin: "0 auto",
-        backgroundColor: "#f9f9f9",
-        color: "#333333",
-        fontFamily: "Poppins, sans-serif",
+        backgroundColor: "#f8fafc",
       }}
     >
       <h2
         style={{
-          color: "#333333",
-          fontWeight: 600,
-          marginBottom: 40,
-          fontSize: "2.5rem",
+          color: "#1e293b",
+          fontWeight: 700,
+          marginBottom: "clamp(30px, 5vw, 50px)",
+          fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
           textAlign: "center",
           position: "relative",
         }}
@@ -273,12 +62,12 @@ const Skills = () => {
           style={{
             content: '""',
             position: "absolute",
-            bottom: "-10px",
+            bottom: "-15px",
             left: "50%",
             transform: "translateX(-50%)",
-            width: "80px",
+            width: "60px",
             height: "4px",
-            backgroundColor: "#800080",
+            background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
             borderRadius: "2px",
           }}
         ></div>
@@ -286,102 +75,87 @@ const Skills = () => {
 
       <div
         style={{
-          display: "flex",
-          flexDirection: window.innerWidth > 768 ? "row" : "column",
-          gap: window.innerWidth > 768 ? "80px" : "40px",
-          alignItems: window.innerWidth > 768 ? "flex-start" : "center",
-          marginTop: "60px",
+          display: "grid",
+          gridTemplateColumns: window.innerWidth > 768 ? "1fr 1fr" : "1fr",
+          gap: window.innerWidth > 768 ? "clamp(40px, 6vw, 80px)" : "clamp(20px, 4vw, 40px)",
+          alignItems: "flex-start",
+          marginTop: "clamp(40px, 6vw, 60px)",
         }}
       >
-        {/* Left Side - Title and Description */}
-        <div
-          style={{
-            flex: "1",
-            maxWidth: window.innerWidth > 768 ? "500px" : "100%",
-          }}
-        >
+        <div>
+          <h3
+            style={{
+              color: "#1e293b",
+              fontWeight: 700,
+              marginBottom: "20px",
+              fontSize: "clamp(1.2rem, 4vw, 1.8rem)",
+              lineHeight: 1.3,
+            }}
+          >
+            What My Programming Skills Include?
+          </h3>
+          <p
+            style={{
+              color: "#64748b",
+              lineHeight: 1.7,
+              marginBottom: "35px",
+              fontSize: "clamp(14px, 2vw, 16px)",
+            }}
+          >
+            I develop simple, intuitive and responsive user interfaces that help users get things done with less effort
+            and time using modern technologies and best practices.
+          </p>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              position: "relative",
+              gap: "15px",
+              marginBottom: "20px",
+              flexWrap: "wrap",
             }}
           >
-            <div style={{ position: "relative" }}>
-              <h3
-                style={{
-                  color: "#333333",
-                  fontWeight: 700,
-                  marginBottom: "20px",
-                  fontSize: "28px",
-                  lineHeight: 1.2,
-                }}
-              >
-                What My Programming Skills Include?
-              </h3>
-              <p
-                style={{
-                  color: "#666666",
-                  lineHeight: 1.7,
-                  marginBottom: "30px",
-                  fontSize: "16px",
-                }}
-              >
-                I develop simple, intuitive and responsive user interface that helps users get things done with less
-                effort and time with those technologies.
-              </p>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "15px",
-                }}
-              >
-                <button
-                  onClick={() => setActiveTab("skills")}
-                  style={{
-                    backgroundColor: activeTab === "skills" ? "#800080" : "white",
-                    color: activeTab === "skills" ? "white" : "#666666",
-                    border: activeTab === "skills" ? "none" : "1px solid #dddddd",
-                    borderRadius: "30px",
-                    padding: "10px 25px",
-                    textTransform: "none",
-                    fontWeight: 500,
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    boxShadow: activeTab === "skills" ? "0 4px 10px rgba(255,107,107,0.3)" : "none",
-                  }}
-                >
-                  Skills
-                </button>
-                <button
-                  onClick={() => setActiveTab("tools")}
-                  style={{
-                    backgroundColor: activeTab === "tools" ? "#800080" : "white",
-                    color: activeTab === "tools" ? "white" : "#666666",
-                    border: activeTab === "tools" ? "none" : "1px solid #dddddd",
-                    borderRadius: "30px",
-                    padding: "10px 25px",
-                    textTransform: "none",
-                    fontWeight: 500,
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    boxShadow: activeTab === "tools" ? "0 4px 10px rgba(255,107,107,0.3)" : "none",
-                  }}
-                >
-                  Tools
-                </button>
-              </div>
-            </div>
+            <button
+              onClick={() => setActiveTab("skills")}
+              style={{
+                backgroundColor: activeTab === "skills" ? "#3b82f6" : "white",
+                color: activeTab === "skills" ? "white" : "#64748b",
+                border: activeTab === "skills" ? "none" : "2px solid #e2e8f0",
+                borderRadius: "50px",
+                padding: "12px 30px",
+                fontWeight: 600,
+                fontSize: "clamp(12px, 1.5vw, 14px)",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                boxShadow:
+                  activeTab === "skills" ? "0 4px 15px rgba(59, 130, 246, 0.3)" : "0 2px 10px rgba(0,0,0,0.05)",
+              }}
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => setActiveTab("tools")}
+              style={{
+                backgroundColor: activeTab === "tools" ? "#3b82f6" : "white",
+                color: activeTab === "tools" ? "white" : "#64748b",
+                border: activeTab === "tools" ? "none" : "2px solid #e2e8f0",
+                borderRadius: "50px",
+                padding: "12px 30px",
+                fontWeight: 600,
+                fontSize: "clamp(12px, 1.5vw, 14px)",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                boxShadow: activeTab === "tools" ? "0 4px 15px rgba(59, 130, 246, 0.3)" : "0 2px 10px rgba(0,0,0,0.05)",
+              }}
+            >
+              Tools
+            </button>
           </div>
         </div>
 
-        {/* Right Side - Skill Icons */}
         <div
           style={{
-            flex: "1",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
-            gap: "20px",
+            gap: "clamp(15px, 2vw, 20px)",
             width: "100%",
           }}
         >
@@ -390,45 +164,50 @@ const Skills = () => {
               key={index}
               style={{
                 backgroundColor: "white",
-                borderRadius: "10px",
-                padding: "20px",
+                borderRadius: "15px",
+                padding: "clamp(15px, 3vw, 25px) clamp(10px, 2vw, 20px)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
+                boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
-                border: "1px solid #f0f0f0",
+                border: "1px solid #e2e8f0",
+                minHeight: "100px",
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = "translateY(-10px)"
-                e.target.style.boxShadow = "0 10px 20px rgba(0,0,0,0.1)"
-                e.target.style.backgroundColor = "#fff"
+                e.target.style.transform = "translateY(-10px) scale(1.05)"
+                e.target.style.boxShadow = "0 15px 30px rgba(0,0,0,0.12)"
+                e.target.style.borderColor = "#3b82f6"
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = "translateY(0)"
-                e.target.style.boxShadow = "0 5px 15px rgba(0,0,0,0.05)"
-                e.target.style.backgroundColor = "#fff"
+                e.target.style.transform = "translateY(0) scale(1)"
+                e.target.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)"
+                e.target.style.borderColor = "#e2e8f0"
               }}
             >
               <img
                 src={item.icon || "/placeholder.svg"}
                 alt={item.name}
                 style={{
-                  width: "40px",
-                  height: "40px",
-                  marginBottom: "10px",
-                  padding: "10px",
+                  width: "clamp(35px, 5vw, 45px)",
+                  height: "clamp(35px, 5vw, 45px)",
+                  marginBottom: "12px",
+                  transition: "transform 0.3s ease",
+                }}
+                onError={(e) => {
+                  e.target.style.display = "none"
                 }}
               />
               <p
                 style={{
-                  color: "#444444",
-                  fontSize: "14px",
-                  fontWeight: 500,
+                  color: "#334155",
+                  fontSize: "clamp(11px, 1.5vw, 13px)",
+                  fontWeight: 600,
                   textAlign: "center",
                   margin: 0,
+                  lineHeight: 1.2,
                 }}
               >
                 {item.name}
