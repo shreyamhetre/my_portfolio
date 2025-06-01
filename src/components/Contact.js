@@ -243,8 +243,8 @@ const Contact = () => {
         }}
       >
         {[
-          { href: "mailto:shreya.mhetre@example.com", icon: "email", label: "Email" },
-          { href: "https://www.linkedin.com/in/shreya-mhetre", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:shreyamhetre2002@gmail.com", icon: "email", label: "Email" },
+          { href: "https://www.linkedin.com/in/shreya-mhetre-768a79246", icon: "linkedin", label: "LinkedIn" },
           { href: "https://github.com/shreyamhetre", icon: "github", label: "GitHub" },
         ].map((social, index) => (
           <a
