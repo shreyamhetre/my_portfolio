@@ -146,12 +146,12 @@ const Experiences = () => {
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.target.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)"
-                e.target.style.transform = "translateY(-5px)"
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)"
+                e.currentTarget.style.transform = "translateY(-5px)"
               }}
               onMouseLeave={(e) => {
-                e.target.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)"
-                e.target.style.transform = "translateY(0)"
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)"
+                e.currentTarget.style.transform = "translateY(0)"
               }}
             >
               <h3

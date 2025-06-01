@@ -54,12 +54,12 @@ const Resume = () => {
           alignItems: "center",
         }}
         onMouseEnter={(e) => {
-          e.target.style.transform = "translateY(-10px)"
-          e.target.style.boxShadow = "0 25px 50px rgba(0,0,0,0.12)"
+          e.currentTarget.style.transform = "translateY(-10px)"
+          e.currentTarget.style.boxShadow = "0 25px 50px rgba(0,0,0,0.12)"
         }}
         onMouseLeave={(e) => {
-          e.target.style.transform = "translateY(0)"
-          e.target.style.boxShadow = "0 15px 40px rgba(0,0,0,0.08)"
+          e.currentTarget.style.transform = "translateY(0)"
+          e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.08)"
         }}
       >
         {/* Background decoration */}

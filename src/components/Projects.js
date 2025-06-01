@@ -1,6 +1,16 @@
 "use client"
 
+import { useState, useEffect } from "react"
+
 const Projects = () => {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200)
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const projects = [
     {
       title: "AI Research Assistant",
@@ -71,7 +81,7 @@ const Projects = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: window.innerWidth > 768 ? "repeat(4, 1fr)" : "1fr",
+          gridTemplateColumns: windowWidth > 768 ? "repeat(4, 1fr)" : "1fr",
           gap: "clamp(15px, 2vw, 30px)",
           marginTop: "clamp(40px, 6vw, 60px)",
         }}
@@ -89,16 +99,16 @@ const Projects = () => {
               height: "100%",
               display: "flex",
               flexDirection: "column",
-              maxWidth: window.innerWidth > 480 ? "unset" : "95vw",
-              margin: window.innerWidth > 480 ? "unset" : "0 auto",
+              maxWidth: windowWidth > 480 ? "unset" : "95vw",
+              margin: windowWidth > 480 ? "unset" : "0 auto",
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-10px)"
-              e.target.style.boxShadow = "0 20px 40px rgba(0,0,0,0.12)"
+              e.currentTarget.style.transform = "translateY(-10px)"
+              e.currentTarget.style.boxShadow = "0 20px 40px rgba(0,0,0,0.12)"
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0)"
-              e.target.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)"
+              e.currentTarget.style.transform = "translateY(0)"
+              e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)"
             }}
           >
             <div
@@ -132,8 +142,8 @@ const Projects = () => {
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
-                alignItems: window.innerWidth > 480 ? "flex-start" : "center",
-                textAlign: window.innerWidth > 480 ? "left" : "center",
+                alignItems: windowWidth > 480 ? "flex-start" : "center",
+                textAlign: windowWidth > 480 ? "left" : "center",
               }}
             >
               <h3
@@ -167,7 +177,7 @@ const Projects = () => {
                   flexWrap: "wrap",
                   gap: "8px",
                   marginBottom: "25px",
-                  justifyContent: window.innerWidth > 480 ? "flex-start" : "center",
+                  justifyContent: windowWidth > 480 ? "flex-start" : "center",
                 }}
               >
                 {project.technologies.map((tech, i) => (
@@ -187,7 +197,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div style={{ display: "flex", gap: "12px", justifyContent: window.innerWidth > 480 ? "flex-start" : "center", width: "100%", marginTop: "auto" }}>
+              <div style={{ display: "flex", gap: "12px", justifyContent: windowWidth > 480 ? "flex-start" : "center", width: "100%", marginTop: "auto" }}>
                 <a
                   href={project.githubLink}
                   target="_blank"
