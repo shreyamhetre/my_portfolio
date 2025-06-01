@@ -71,7 +71,7 @@ const Projects = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: window.innerWidth > 768 ? "repeat(4, 1fr)" : "repeat(auto-fit, minmax(250px, 1fr))",
+          gridTemplateColumns: window.innerWidth > 768 ? "repeat(4, 1fr)" : "1fr",
           gap: "clamp(15px, 2vw, 30px)",
           marginTop: "clamp(40px, 6vw, 60px)",
         }}
@@ -89,6 +89,8 @@ const Projects = () => {
               height: "100%",
               display: "flex",
               flexDirection: "column",
+              maxWidth: window.innerWidth > 480 ? "unset" : "95vw",
+              margin: window.innerWidth > 480 ? "unset" : "0 auto",
             }}
             onMouseEnter={(e) => {
               e.target.style.transform = "translateY(-10px)"
@@ -130,6 +132,8 @@ const Projects = () => {
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
+                alignItems: window.innerWidth > 480 ? "flex-start" : "center",
+                textAlign: window.innerWidth > 480 ? "left" : "center",
               }}
             >
               <h3
@@ -151,6 +155,7 @@ const Projects = () => {
                   fontSize: "clamp(13px, 1.5vw, 15px)",
                   flex: 1,
                   marginBottom: "20px",
+                  wordBreak: "break-word",
                 }}
               >
                 {project.description}
@@ -162,6 +167,7 @@ const Projects = () => {
                   flexWrap: "wrap",
                   gap: "8px",
                   marginBottom: "25px",
+                  justifyContent: window.innerWidth > 480 ? "flex-start" : "center",
                 }}
               >
                 {project.technologies.map((tech, i) => (
@@ -181,14 +187,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div
-                style={{
-                  marginTop: "auto",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
+              <div style={{ display: "flex", gap: "12px", justifyContent: window.innerWidth > 480 ? "flex-start" : "center", width: "100%", marginTop: "auto" }}>
                 <a
                   href={project.githubLink}
                   target="_blank"
@@ -226,47 +225,6 @@ const Projects = () => {
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </a>
-
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "50%",
-                    background: "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#3b82f6",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)"
-                    e.target.style.color = "white"
-                    e.target.style.transform = "scale(1.1)"
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background =
-                      "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)"
-                    e.target.style.color = "#3b82f6"
-                    e.target.style.transform = "scale(1)"
-                  }}
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </div>
               </div>
             </div>
           </div>

@@ -63,13 +63,15 @@ const Contact = () => {
           maxWidth: "500px",
           margin: "0 auto 50px",
           border: "1px solid #e2e8f0",
+          boxSizing: "border-box",
         }}
       >
         <form
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "25px",
+            gap: "20px",
+            width: "100%",
           }}
         >
           <div
@@ -93,7 +95,7 @@ const Contact = () => {
               type="text"
               placeholder="John Doe"
               style={{
-                width: "100%",
+                width: "85%",
                 padding: "15px 20px",
                 borderRadius: "12px",
                 border: "2px solid #e2e8f0",
@@ -136,7 +138,7 @@ const Contact = () => {
               type="email"
               placeholder="john@example.com"
               style={{
-                width: "100%",
+                width: "85%",
                 padding: "15px 20px",
                 borderRadius: "12px",
                 border: "2px solid #e2e8f0",
@@ -179,7 +181,7 @@ const Contact = () => {
               placeholder="Your message here..."
               rows={5}
               style={{
-                width: "100%",
+                width: "85%",
                 padding: "15px 20px",
                 borderRadius: "12px",
                 border: "2px solid #e2e8f0",

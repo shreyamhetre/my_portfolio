@@ -41,14 +41,17 @@ const Resume = () => {
         style={{
           backgroundColor: "white",
           borderRadius: "20px",
-          padding: "clamp(30px, 5vw, 50px)",
-          maxWidth: "600px",
-          margin: "clamp(40px, 6vw, 60px) auto 0",
+          padding: "clamp(20px, 4vw, 30px)",
+          maxWidth: "95vw",
+          margin: "clamp(30px, 5vw, 40px) auto 0",
           boxShadow: "0 15px 40px rgba(0,0,0,0.08)",
           transition: "all 0.3s ease",
           border: "1px solid #e2e8f0",
           position: "relative",
           overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = "translateY(-10px)"
