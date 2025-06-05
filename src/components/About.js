@@ -55,9 +55,8 @@ const About = () => {
               fontSize: "clamp(14px, 2vw, 16px)",
             }}
           >
-            Hello! My name is Shreya and I enjoy creating things that live on the internet. My interest in web
-            development started back in 2018 when I decided to try editing custom Tumblr themes — turns out hacking
-            together a custom blog taught me a lot about HTML & CSS!
+          I am a Software Engineer with 1.5 years of experience at Equations Work, where I’ve contributed to AI-powered platforms, sustainable tech solutions, and AR/VR-enabled tools.  Proficient in full-stack development using Python, React, and Node.js, with a strong foundation in AI/ML and cloud-based systems. 
+
           </p>
           <p
             style={{
@@ -67,9 +66,8 @@ const About = () => {
               fontSize: "clamp(14px, 2vw, 16px)",
             }}
           >
-            Fast-forward to today, and I've had the privilege of working at a software company, a start-up, and a
-            student-led design studio. My main focus these days is building accessible, inclusive products and digital
-            experiences.
+          Passionate about leveraging technology to build intelligent, impactful applications. Incoming Master’s in Computer Science student at Arizona State University with a focus on AI/ML. Actively seeking Summer 2026 internships and part-time roles to gain industry exposure in advanced tech domains. Open to networking and collaboration opportunities.
+
           </p>
         </div>
 

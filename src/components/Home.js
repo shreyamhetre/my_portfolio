@@ -88,8 +88,8 @@ const Home = () => {
             animation: "fadeInUp 1s ease-out 0.6s both",
           }}
         >
-          I'm a software engineer specializing in building exceptional digital experiences. Currently, I'm focused on
-          building accessible, human-centered products that make a difference.
+          I am a Software Engineer with 1.5 years of experience at Equations Work, where I’ve contributed to AI-powered platforms, sustainable tech solutions, and AR/VR-enabled tools.  Proficient in full-stack development using Python, React, and Node.js, with a strong foundation in AI/ML and cloud-based systems. Passionate about leveraging technology to build intelligent, impactful applications. Incoming Master’s in Computer Science student at Arizona State University with a focus on AI/ML. Actively seeking Summer 2026 internships and part-time roles to gain industry exposure in advanced tech domains. Open to networking and collaboration opportunities.
+
         </p>
         <a
           href="#contact"
