@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const Experiences = () => {
   const experiences = [
@@ -26,40 +26,40 @@ const Experiences = () => {
       period: "Aug 2022 - Jun 2023",
       description: "Collaborated with team members on various web development projects and community initiatives.",
     },
-  ]
+  ];
 
-  const boxRefs = useRef([])
-  const lastScrollY = useRef(window.scrollY)
+  const boxRefs = useRef([]);
+  const lastScrollY = useRef(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
 
       boxRefs.current.forEach((box, index) => {
-        if (!box) return
+        if (!box) return;
 
-        const rect = box.getBoundingClientRect()
-        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0
+        const rect = box.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
 
         if (isInViewport) {
-          box.style.opacity = 1
-          box.style.transform = "translateX(0)"
+          box.style.opacity = 1;
+          box.style.transform = "translateX(0)";
         } else {
-          box.style.opacity = 0
-          box.style.transform = index % 2 === 0 ? "translateX(-150px)" : "translateX(150px)"
+          box.style.opacity = 0;
+          box.style.transform = index % 2 === 0 ? "translateX(-150px)" : "translateX(150px)";
         }
-      })
+      });
 
-      lastScrollY.current = currentScrollY
-    }
+      lastScrollY.current = currentScrollY;
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    handleScroll()
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section
@@ -146,12 +146,12 @@ const Experiences = () => {
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)"
-                e.currentTarget.style.transform = "translateY(-5px)"
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)";
+                e.currentTarget.style.transform = "translateY(-5px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)"
-                e.currentTarget.style.transform = "translateY(0)"
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
               <h3
@@ -227,7 +227,7 @@ const Experiences = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experiences
+export default Experiences;

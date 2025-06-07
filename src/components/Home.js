@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 const Home = () => {
   return (
@@ -76,7 +76,6 @@ const Home = () => {
             animation: "fadeInUp 1s ease-out 0.4s both",
           }}
         >
-          I build things for the web.
         </h2>
         <p
           style={{
@@ -88,8 +87,7 @@ const Home = () => {
             animation: "fadeInUp 1s ease-out 0.6s both",
           }}
         >
-          I am a Software Engineer with 1.5 years of experience at Equations Work, where I’ve contributed to AI-powered platforms, sustainable tech solutions, and AR/VR-enabled tools.  Proficient in full-stack development using Python, React, and Node.js, with a strong foundation in AI/ML and cloud-based systems. Passionate about leveraging technology to build intelligent, impactful applications. Incoming Master’s in Computer Science student at Arizona State University with a focus on AI/ML. Actively seeking Summer 2026 internships and part-time roles to gain industry exposure in advanced tech domains. Open to networking and collaboration opportunities.
-
+          I’m a Software Engineer with 1.5 years of experience at Equations Work, specializing in AI-powered platforms,  and sustainable tech solutions. As an incoming Master’s student in Computer Science at Arizona State University, I’m seeking Summer 2026 internships to advance my expertise in cutting-edge technologies. Let’s connect to create impactful applications together.
         </p>
         <a
           href="#contact"
@@ -107,12 +105,12 @@ const Home = () => {
             animation: "fadeInUp 1s ease-out 0.8s both",
           }}
           onMouseEnter={(e) => {
-            e.target.style.transform = "translateY(-3px)"
-            e.target.style.boxShadow = "0 12px 35px rgba(59, 130, 246, 0.4)"
+            e.target.style.transform = "translateY(-3px)";
+            e.target.style.boxShadow = "0 12px 35px rgba(59, 130, 246, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.target.style.transform = "translateY(0)"
-            e.target.style.boxShadow = "0 8px 25px rgba(59, 130, 246, 0.3)"
+            e.target.style.transform = "translateY(0)";
+            e.target.style.boxShadow = "0 8px 25px rgba(59, 130, 246, 0.3)";
           }}
         >
           Get In Touch
@@ -132,7 +130,7 @@ const Home = () => {
         `}
       </style>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 const Contact = () => {
   return (
@@ -52,188 +52,6 @@ const Contact = () => {
         I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want
         to say hi, I'll try my best to get back to you!
       </p>
-
-      <div
-        style={{
-          backgroundColor: "white",
-          borderRadius: "20px",
-          padding: "clamp(20px, 4vw, 40px)",
-          boxShadow: "0 15px 40px rgba(0,0,0,0.08)",
-          width: "100%",
-          maxWidth: "500px",
-          margin: "0 auto 50px",
-          border: "1px solid #e2e8f0",
-          boxSizing: "border-box",
-        }}
-      >
-        <form
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-            width: "100%",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: "8px",
-            }}
-          >
-            <label
-              style={{
-                color: "#374151",
-                fontSize: "clamp(12px, 1.5vw, 14px)",
-                fontWeight: "600",
-              }}
-            >
-              Your Name
-            </label>
-            <input
-              type="text"
-              placeholder="John Doe"
-              style={{
-                width: "85%",
-                padding: "15px 20px",
-                borderRadius: "12px",
-                border: "2px solid #e2e8f0",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                transition: "all 0.3s ease",
-                outline: "none",
-                backgroundColor: "#f8fafc",
-              }}
-              onFocus={(e) => {
-                e.target.style.borderColor = "#3b82f6"
-                e.target.style.backgroundColor = "white"
-                e.target.style.boxShadow = "0 0 0 3px rgba(59, 130, 246, 0.1)"
-              }}
-              onBlur={(e) => {
-                e.target.style.borderColor = "#e2e8f0"
-                e.target.style.backgroundColor = "#f8fafc"
-                e.target.style.boxShadow = "none"
-              }}
-            />
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: "8px",
-            }}
-          >
-            <label
-              style={{
-                color: "#374151",
-                fontSize: "clamp(12px, 1.5vw, 14px)",
-                fontWeight: "600",
-              }}
-            >
-              Your Email
-            </label>
-            <input
-              type="email"
-              placeholder="john@example.com"
-              style={{
-                width: "85%",
-                padding: "15px 20px",
-                borderRadius: "12px",
-                border: "2px solid #e2e8f0",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                transition: "all 0.3s ease",
-                outline: "none",
-                backgroundColor: "#f8fafc",
-              }}
-              onFocus={(e) => {
-                e.target.style.borderColor = "#3b82f6"
-                e.target.style.backgroundColor = "white"
-                e.target.style.boxShadow = "0 0 0 3px rgba(59, 130, 246, 0.1)"
-              }}
-              onBlur={(e) => {
-                e.target.style.borderColor = "#e2e8f0"
-                e.target.style.backgroundColor = "#f8fafc"
-                e.target.style.boxShadow = "none"
-              }}
-            />
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: "8px",
-            }}
-          >
-            <label
-              style={{
-                color: "#374151",
-                fontSize: "clamp(12px, 1.5vw, 14px)",
-                fontWeight: "600",
-              }}
-            >
-              Message
-            </label>
-            <textarea
-              placeholder="Your message here..."
-              rows={5}
-              style={{
-                width: "85%",
-                padding: "15px 20px",
-                borderRadius: "12px",
-                border: "2px solid #e2e8f0",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                transition: "all 0.3s ease",
-                outline: "none",
-                resize: "vertical",
-                backgroundColor: "#f8fafc",
-                fontFamily: "inherit",
-              }}
-              onFocus={(e) => {
-                e.target.style.borderColor = "#3b82f6"
-                e.target.style.backgroundColor = "white"
-                e.target.style.boxShadow = "0 0 0 3px rgba(59, 130, 246, 0.1)"
-              }}
-              onBlur={(e) => {
-                e.target.style.borderColor = "#e2e8f0"
-                e.target.style.backgroundColor = "#f8fafc"
-                e.target.style.boxShadow = "none"
-              }}
-            />
-          </div>
-
-          <button
-            type="submit"
-            style={{
-              background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
-              color: "white",
-              border: "none",
-              borderRadius: "12px",
-              padding: "16px 20px",
-              fontSize: "clamp(14px, 2vw, 16px)",
-              fontWeight: "600",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              marginTop: "10px",
-              boxShadow: "0 8px 25px rgba(59, 130, 246, 0.3)",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-2px)"
-              e.target.style.boxShadow = "0 12px 35px rgba(59, 130, 246, 0.4)"
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0)"
-              e.target.style.boxShadow = "0 8px 25px rgba(59, 130, 246, 0.3)"
-            }}
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-
       <div
         style={{
           display: "flex",
@@ -267,16 +85,16 @@ const Contact = () => {
               border: "1px solid #e2e8f0",
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)"
-              e.target.style.color = "white"
-              e.target.style.transform = "translateY(-5px)"
-              e.target.style.boxShadow = "0 15px 35px rgba(59, 130, 246, 0.3)"
+              e.target.style.background = "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)";
+              e.target.style.color = "white";
+              e.target.style.transform = "translateY(-5px)";
+              e.target.style.boxShadow = "0 15px 35px rgba(59, 130, 246, 0.3)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.background = "white"
-              e.target.style.color = "#64748b"
-              e.target.style.transform = "translateY(0)"
-              e.target.style.boxShadow = "0 8px 25px rgba(0,0,0,0.08)"
+              e.target.style.background = "white";
+              e.target.style.color = "#64748b";
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "0 8px 25px rgba(0,0,0,0.08)";
             }}
           >
             {social.icon === "email" && (
@@ -301,7 +119,7 @@ const Contact = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

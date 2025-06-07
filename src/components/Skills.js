@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("skills")
+  const [activeTab, setActiveTab] = useState("skills");
 
   const skillsData = {
     skills: [
@@ -33,9 +33,9 @@ const Skills = () => {
       { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
       { name: "Webpack", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" },
     ],
-  }
+  };
 
-  const activeItems = skillsData[activeTab]
+  const activeItems = skillsData[activeTab];
 
   return (
     <section
@@ -177,14 +177,14 @@ const Skills = () => {
                 minHeight: "100px",
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = "translateY(-10px) scale(1.05)"
-                e.target.style.boxShadow = "0 15px 30px rgba(0,0,0,0.12)"
-                e.target.style.borderColor = "#3b82f6"
+                e.target.style.transform = "translateY(-10px) scale(1.05)";
+                e.target.style.boxShadow = "0 15px 30px rgba(0,0,0,0.12)";
+                e.target.style.borderColor = "#3b82f6";
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = "translateY(0) scale(1)"
-                e.target.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)"
-                e.target.style.borderColor = "#e2e8f0"
+                e.target.style.transform = "translateY(0) scale(1)";
+                e.target.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)";
+                e.target.style.borderColor = "#e2e8f0";
               }}
             >
               <img
@@ -197,7 +197,7 @@ const Skills = () => {
                   transition: "transform 0.3s ease",
                 }}
                 onError={(e) => {
-                  e.target.style.display = "none"
+                  e.target.style.display = "none";
                 }}
               />
               <p
@@ -217,7 +217,7 @@ const Skills = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

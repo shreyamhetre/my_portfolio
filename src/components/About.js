@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 const About = () => {
   return (
     <section
-ограф id="about"
+      id="about"
       style={{
         padding: "clamp(40px, 8vw, 80px) 20px",
-        maxWidth: "1200px" ,
+        maxWidth: "1200px",
         margin: "0 auto",
         backgroundColor: "#ffffff",
       }}
@@ -55,8 +55,7 @@ const About = () => {
               fontSize: "clamp(14px, 2vw, 16px)",
             }}
           >
-          I am a Software Engineer with 1.5 years of experience at Equations Work, where I’ve contributed to AI-powered platforms, sustainable tech solutions, and AR/VR-enabled tools.  Proficient in full-stack development using Python, React, and Node.js, with a strong foundation in AI/ML and cloud-based systems. 
-
+            I’m a Software Engineer with 1.5 years of experience at Equations Work, where I’ve built AI-powered platforms, sustainable tech solutions, and AR/VR-enabled tools. My expertise spans full-stack development with Python, React, and Node.js, complemented by a strong foundation in AI/ML frameworks like TensorFlow, PyTorch, and LangChain, as well as cloud-based systems using Docker and Jenkins.
           </p>
           <p
             style={{
@@ -66,14 +65,13 @@ const About = () => {
               fontSize: "clamp(14px, 2vw, 16px)",
             }}
           >
-          Passionate about leveraging technology to build intelligent, impactful applications. Incoming Master’s in Computer Science student at Arizona State University with a focus on AI/ML. Actively seeking Summer 2026 internships and part-time roles to gain industry exposure in advanced tech domains. Open to networking and collaboration opportunities.
-
+            As an incoming Master’s student in Computer Science at Arizona State University, I’m passionate about leveraging technology to create intelligent, impactful applications. I’m actively seeking Summer 2026 internships and part-time roles to deepen my expertise in AI/ML and advanced tech domains, and I’m open to networking and collaboration opportunities to drive innovation.
           </p>
         </div>
 
         <div>
           <h3 style={{ color: "#334155", marginBottom: "20px", fontSize: "clamp(16px, 2vw, 18px)", fontWeight: 600 }}>
-            Here are a few technologies I've been working with recently:
+            Technologies I Work With
           </h3>
 
           <div
@@ -84,7 +82,16 @@ const About = () => {
               marginBottom: "35px",
             }}
           >
-            {["JavaScript (ES6+)", "React", "Node.js", "TypeScript", "Material UI", "Tailwind CSS"].map((tech, i) => (
+            {[
+              "Python",
+              "React",
+              "Node.js",
+              "TypeScript",
+              "TensorFlow",
+              "PostgreSQL",
+              "Docker",
+              "FastAPI"
+            ].map((tech, i) => (
               <div
                 key={i}
                 style={{
@@ -124,12 +131,12 @@ const About = () => {
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#3b82f6"
-                e.target.style.color = "white"
+                e.target.style.backgroundColor = "#3b82f6";
+                e.target.style.color = "white";
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "transparent"
-                e.target.style.color = "#3b82f6"
+                e.target.style.backgroundColor = "transparent";
+                e.target.style.color = "#3b82f6";
               }}
             >
               View Resume
@@ -150,12 +157,12 @@ const About = () => {
                 boxShadow: "0 4px 15px rgba(59, 130, 246, 0.3)",
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = "translateY(-2px)"
-                e.target.style.boxShadow = "0 6px 20px rgba(59, 130, 246, 0.4)"
+                e.target.style.transform = "translateY(-2px)";
+                e.target.style.boxShadow = "0 6px 20px rgba(59, 130, 246, 0.4)";
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = "translateY(0)"
-                e.target.style.boxShadow = "0 4px 15px rgba(59, 130, 246, 0.3)"
+                e.target.style.transform = "translateY(0)";
+                e.target.style.boxShadow = "0 4px 15px rgba(59, 130, 246, 0.3)";
               }}
             >
               Hire Me
@@ -164,7 +171,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
