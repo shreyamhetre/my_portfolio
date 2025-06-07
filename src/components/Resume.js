@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 const Resume = () => {
   return (
@@ -54,12 +54,12 @@ const Resume = () => {
           alignItems: "center",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-10px)"
-          e.currentTarget.style.boxShadow = "0 25px 50px rgba(0,0,0,0.12)"
+          e.currentTarget.style.transform = "translateY(-10px)";
+          e.currentTarget.style.boxShadow = "0 25px 50px rgba(0,0,0,0.12)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0)"
-          e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.08)"
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.08)";
         }}
       >
         {/* Background decoration */}
@@ -137,15 +137,15 @@ const Resume = () => {
               lineHeight: 1.7,
               marginBottom: "25px",
               fontSize: "clamp(14px, 2vw, 16px)",
+              maxWidth: "600px",
             }}
           >
-            A comprehensive overview of my skills, experience, and projects. Download my resume to learn more about my
-            journey in web development and how I can contribute to your team's success.
+            A detailed overview of my skills, experiences, and projects in AI/ML and full-stack development. Download my resume to explore how I can contribute to innovative tech solutions.
           </p>
 
           <a
             href="/resume.pdf"
-            download
+            download="ShreyaMhetre_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -161,12 +161,12 @@ const Resume = () => {
               boxShadow: "0 8px 25px rgba(59, 130, 246, 0.3)",
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-3px) scale(1.05)"
-              e.target.style.boxShadow = "0 12px 35px rgba(59, 130, 246, 0.4)"
+              e.target.style.transform = "translateY(-3px) scale(1.05)";
+              e.target.style.boxShadow = "0 12px 35px rgba(59, 130, 246, 0.4)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0) scale(1)"
-              e.target.style.boxShadow = "0 8px 25px rgba(59, 130, 246, 0.3)"
+              e.target.style.transform = "translateY(0) scale(1)";
+              e.target.style.boxShadow = "0 8px 25px rgba(59, 130, 246, 0.3)";
             }}
           >
             Download Resume
@@ -174,7 +174,7 @@ const Resume = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

@@ -6,15 +6,15 @@ const Experiences = () => {
   const experiences = [
     {
       title: "Software Engineer at Equations Work",
-      period: "Aug 2023 - May 2025",
+      period: "March 2024 - June 2025",
       description:
         "Worked as a Software Engineer, focusing on developing scalable web applications using modern technologies and best practices.",
     },
     {
-      title: "Web Development Intern at Coneixement",
-      period: "Dec 2022 - Feb 2024",
+      title: "Software Engineer at Equations Work",
+      period: "June 2023 - March 2024",
       description:
-        "Gained hands-on experience in full-stack development, working on client projects and learning industry standards.",
+        "Developed an image annotation tool within an ML platform, enabling users to upload images and download annotations in XML/TXT formats, increasing annotation efficiency by 30%",
     },
     {
       title: "Frontend Developer at S2R2 Technologies",

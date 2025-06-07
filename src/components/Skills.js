@@ -7,31 +7,29 @@ const Skills = () => {
 
   const skillsData = {
     skills: [
-      { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-      { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-      {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-      },
-      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      {
-        name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      },
-      {
-        name: "PostgreSQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-      },
+      { name: "Python", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/python/python-original.svg" },
+      { name: "C/C++", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/cplusplus/cplusplus-original.svg" },
+      { name: "HTML/CSS", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/html5/html5-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/typescript/typescript-original.svg" },
+      { name: "ReactJs", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/react/react-original.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/express/express-original.svg" },
+      { name: "Flask", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/flask/flask-original.svg" },
+      { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/bootstrap/bootstrap-original.svg" },
+      { name: "Material-UI", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/materialui/materialui-original.svg" },
+      { name: "Three.js", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/threejs/threejs-original.svg" },
+      { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/tensorflow/tensorflow-original.svg" },
+      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/postgresql/postgresql-original.svg" },
+      { name: "MySQL", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/mysql/mysql-original.svg" },
+      { name: "Neo4j", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/neo4j/neo4j-original.svg" },
     ],
     tools: [
-      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-      { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-      { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "Webpack", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" },
+      { name: "Git", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/git/git-original.svg" },
+      { name: "GitHub", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/github/github-original.svg" },
+      { name: "Docker", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/docker/docker-original.svg" },
+      { name: "Jenkins", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/jenkins/jenkins-original.svg" },
+      { name: "Nginx", icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/nginx/nginx-original.svg" },
     ],
   };
 
@@ -92,7 +90,7 @@ const Skills = () => {
               lineHeight: 1.3,
             }}
           >
-            What My Programming Skills Include?
+            My Technical Expertise
           </h3>
           <p
             style={{
@@ -102,8 +100,8 @@ const Skills = () => {
               fontSize: "clamp(14px, 2vw, 16px)",
             }}
           >
-            I develop simple, intuitive and responsive user interfaces that help users get things done with less effort
-            and time using modern technologies and best practices.
+            I specialize in building scalable, responsive web applications and AI/ML solutions using modern frameworks,
+            libraries, and best practices to deliver efficient and impactful results.
           </p>
           <div
             style={{
@@ -129,7 +127,7 @@ const Skills = () => {
                   activeTab === "skills" ? "0 4px 15px rgba(59, 130, 246, 0.3)" : "0 2px 10px rgba(0,0,0,0.05)",
               }}
             >
-              Skills
+              Technologies
             </button>
             <button
               onClick={() => setActiveTab("tools")}
@@ -189,7 +187,7 @@ const Skills = () => {
             >
               <img
                 src={item.icon || "/placeholder.svg"}
-                alt={item.name}
+                alt={`${item.name} icon`}
                 style={{
                   width: "clamp(35px, 5vw, 45px)",
                   height: "clamp(35px, 5vw, 45px)",
@@ -197,7 +195,7 @@ const Skills = () => {
                   transition: "transform 0.3s ease",
                 }}
                 onError={(e) => {
-                  e.target.style.display = "none";
+                  e.target.src = "/placeholder.svg"; // Fallback to placeholder if icon fails
                 }}
               />
               <p

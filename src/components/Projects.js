@@ -275,9 +275,9 @@ const Projects = () => {
     {
       title: "Cyber Security Project",
       description:
-        "A collaborative cyber security project focused on developing tools and techniques to enhance system security. Worked with a team to implement secure authentication mechanisms and vulnerability scanning features, contributing to robust cybersecurity solutions.",
+        "Created a system that automatically identifies and removes hate speech, cyberbullying, and offensive language from user-generated content. The goal is to foster a safer and more respectful online environment.",
       githubLink: "https://github.com/AryaPatil-25/Cyber-Security-Project",
-      technologies: ["Python", "Flask", "SQL", "OWASP ZAP", "Docker"],
+      technologies: ["Python", "Flask", "SQL", "Bert","REST APIs"],
     },
     {
       title: "Chatbot",
