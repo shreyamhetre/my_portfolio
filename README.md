@@ -1,12 +1,13 @@
 **Shreya Mhetre's Portfolio**
+---
 Welcome to my personal portfolio, showcasing my skills, projects, and experiences in AI/ML and full-stack web development. Built with modern technologies, this portfolio highlights my technical expertise and passion for creating impactful solutions.
 
 **🔗 Live Site: https://shreyamhetre.github.io/my_portfolio/**
----
+
 
 **📖 Overview**
 This portfolio is a React-based single-page application that serves as a professional showcase of my work. It features a responsive design, interactive components, and a downloadable resume, making it easy for recruiters and collaborators to explore my qualifications. The site is hosted on GitHub Pages and reflects my ability to develop and deploy modern web applications.
----
+
 **✨ Features**
 **Projects Section:** Displays key projects like an AI Research Assistant, SmartCue, a Cyber Security Project, and a Chatbot, with descriptions, technologies used, and GitHub links.
 **Skills** Section: Highlights my technical expertise in two categories:
