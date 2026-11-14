@@ -32,9 +32,9 @@ export const experience = {
   company: "Equations Work",
   place: "Pune, India",
   roles: [
-    { title: "AI Engineer", period: "Aug 2025 – Present" },
-    { title: "Software Engineer", period: "Mar 2024 – Jun 2025" },
-    { title: "Project Intern", period: "Jun 2023 – Mar 2024" },
+    { title: "AI Engineer", period: "Aug 2025 to Present" },
+    { title: "Software Engineer", period: "Mar 2024 to Jun 2025" },
+    { title: "Project Intern", period: "Jun 2023 to Mar 2024" },
   ],
   projects: [
     {
@@ -86,7 +86,7 @@ export const projects = [
   {
     name: "BrainBase",
     tagline: "Enterprise Knowledge AI Assistant",
-    period: "Oct – Nov 2026",
+    period: "Oct to Nov 2026",
     featured: true,
     stack: ["Python", "FastAPI", "LangGraph", "PostgreSQL", "Next.js", "TypeScript", "OpenAI", "MCP", "Langfuse", "Docker"],
     points: [
@@ -99,7 +99,7 @@ export const projects = [
   {
     name: "PromptDock",
     tagline: "Open-source prompt versioning & LLM evaluation",
-    period: "Oct – Nov 2026",
+    period: "Oct to Nov 2026",
     featured: true,
     stack: ["Python", "FastAPI", "PostgreSQL", "React", "Docker", "GitHub Actions"],
     points: [
@@ -115,7 +115,7 @@ export const projects = [
   {
     name: "AI Research Assistant",
     tagline: "Agentic RAG for research papers",
-    period: "Apr – Jun 2025",
+    period: "Apr to Jun 2025",
     stack: ["Python", "LangChain", "CrewAI", "Gemini API", "pgvector", "React.js", "Docker"],
     points: [
       "CrewAI agents collaborate on document parsing, retrieval and academic query resolution.",
@@ -126,7 +126,7 @@ export const projects = [
   {
     name: "SmartCue",
     tagline: "AI task management system",
-    period: "May – Jul 2025",
+    period: "May to Jul 2025",
     stack: ["Python", "FastAPI", "PostgreSQL", "Gemini API", "React.js", "Material UI"],
     points: [
       "Unifies GitHub Issues, a calendar and an AI assistant through a custom MCP server.",
@@ -150,6 +150,6 @@ export const skills = [
 export const education = {
   school: "Savitribai Phule Pune University",
   degree: "Bachelor of Engineering in Computer Engineering",
-  period: "Aug 2020 – May 2024",
+  period: "Aug 2020 to May 2024",
   place: "Pune, India",
 };
