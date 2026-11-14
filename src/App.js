@@ -87,31 +87,6 @@ export default function App() {
               </a>
             </div>
           </div>
-          <aside className="hero-panel" aria-label="Agentic RAG pipeline">
-            <p className="panel-label">How I build: agentic RAG</p>
-            <svg viewBox="0 0 320 300" role="img" aria-label="Documents flow through retrieval, agents and verification to a cited answer">
-              <defs>
-                <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
-                  <path d="M0 0L8 4L0 8z" fill="#7C93B0" />
-                </marker>
-              </defs>
-              {[
-                ["Sources", "SOPs, docs, Slack, GitLab", 10],
-                ["Retrieval", "hybrid search + pgvector", 80],
-                ["Agents", "route, draft, refine", 150],
-                ["Verification", "evidence check before answer", 220],
-              ].map(([t, s, y], i) => (
-                <g key={t}>
-                  <rect x="10" y={y} width="300" height="54" rx="2" className={i === 3 ? "n n-red" : "n"} />
-                  <text x="26" y={y + 24} className="n-t">{t}</text>
-                  <text x="26" y={y + 42} className="n-s">{s}</text>
-                  <text x="290" y={y + 32} className="n-i" textAnchor="end">{`0${i + 1}`}</text>
-                  {i < 3 && <line x1="160" y1={y + 56} x2="160" y2={y + 78} className="n-l" markerEnd="url(#arr)" />}
-                </g>
-              ))}
-            </svg>
-            <p className="panel-foot">Python · LangChain · CrewAI · Next.js · AWS</p>
-          </aside>
         </section>
 
         {/* ABOUT */}
